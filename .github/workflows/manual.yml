@@ -26,5 +26,5 @@ jobs:
       with:
         path: '/home/runner/work/simple-java-maven-app/simple-java-maven-app/target/*'
     - name: bom upload
-      run: curl --location --request POST 'http://3.128.205.114:8081/api/v1/bom' --header 'X-Api-Key:XKCCVYXgea4QWCv8DOBj1Y3WyxkjuEHP' --form 'project="cd1c4f57-a45f-4188-98fe-4714ec6b3a56"' --form 'bom=@"/home/runner/work/simple-java-maven-app/simple-java-maven-app/target/sbom.json"'
+      run: curl --location --request POST 'http://3.128.205.114:8081/api/v1/bom' --header 'X-Api-Key:XKCCVYXgea4QWCv8DOBj1Y3WyxkjuEHP' --form 'project="cd1c4f57-a45f-4188-98fe-4714ec6b3a56"' --form 'bom=@"/home/runner/work/java-reachability-playground/java-reachability-playground/target/sbom.json"'
     
