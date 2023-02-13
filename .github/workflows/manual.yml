@@ -1,12 +1,4 @@
-# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
-
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-name: Java CI with Maven
+name: dep-track
 
 on:
   push:
@@ -34,4 +26,5 @@ jobs:
       with:
         path: '/home/runner/work/simple-java-maven-app/simple-java-maven-app/target/*'
     - name: bom upload
-      run: curl --location --request POST 'http://3.128.205.114:8081/api/v1/bom' --header 'X-Api-Key:XKCCVYXgea4QWCv8DOBj1Y3WyxkjuEHP' --form 'project="6e330497-9f61-43a0-9080-b87b7aed4b19"' --form 'bom=@"/home/runner/work/simple-java-maven-app/simple-java-maven-app/target/sbom.xml"'
+      run: curl --location --request POST 'http://3.128.205.114:8081/api/v1/bom' --header 'X-Api-Key:XKCCVYXgea4QWCv8DOBj1Y3WyxkjuEHP' --form 'project="cd1c4f57-a45f-4188-98fe-4714ec6b3a56"' --form 'bom=@"/home/runner/work/simple-java-maven-app/simple-java-maven-app/target/sbom.json"'
+    
