@@ -23,8 +23,9 @@
             <version>1.0.0-beta2</version>
         </dependency>
     </dependencies>
-    <plugins>
-          <plugin>
+  <build>
+     <plugins>
+     <plugin>
         <groupId>org.cyclonedx</groupId>
         <artifactId>cyclonedx-maven-plugin</artifactId>
         <version>2.7.4</version>
@@ -36,8 +37,8 @@
                 </goals>
             </execution>
         </executions>
-    </plugin>
-          <plugin>
+        </plugin>
+        <plugin>
         <groupId>org.cyclonedx</groupId>
         <artifactId>cyclonedx-maven-plugin</artifactId>
         <configuration>
@@ -55,4 +56,6 @@
             <outputName>sbom</outputName>
         </configuration>
     </plugin>
+</plugins>
+<build>
 </project>
