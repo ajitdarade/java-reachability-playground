@@ -20,6 +20,11 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'sbom.json'
+    publishLocation: 'Container'
 - task: CmdLine@2
   inputs:
     script: 'curl --location --request POST ''http://3.128.205.114:8081/api/v1/bom'' --header ''X-Api-Key:XKCCVYXgea4QWCv8DOBj1Y3WyxkjuEHP'' --form ''project="b74cb31a-e0dc-49d8-bf82-96010cf9e1f3"'' --form ''bom=@"/home/vsts/work/1/s/target/sbom.json"'''
