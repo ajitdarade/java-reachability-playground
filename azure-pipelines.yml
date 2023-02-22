@@ -22,8 +22,8 @@ steps:
     goals: 'package'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: '/home/vsts/work/1/s/target/sbom.xml'
+    PathtoPublish: '/home/vsts/work/1/s/target'
+    ArtifactName: 'sbom'
     publishLocation: 'Container'
 #- task: CmdLine@2
 #  inputs:
