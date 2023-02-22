@@ -23,7 +23,7 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'sbom.json'
+    ArtifactName: '*'
     publishLocation: 'Container'
 - task: CmdLine@2
   inputs:
